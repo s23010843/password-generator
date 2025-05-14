@@ -2,43 +2,70 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Password Generator</title>
-  <link rel="stylesheet" href="styles.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Generate strong and secure passwords instantly with this customizable, responsive password generator built using JavaScript OOP." />
+  <meta name="keywords" content="password generator, secure passwords, JavaScript, OOP, strong password" />
+  <meta name="author" content="s23010843" />
+  <meta name="robots" content="index, follow">
+  <title>Password Generator | Secure & Customizable</title>
+
+  <!-- Favicon for the site (local version) -->
+  <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+
+  <!-- Open Graph meta tags for social media sharing -->
+  <meta property="og:title" content="Password Generator | Secure & Customizable" />
+  <meta property="og:description" content="Generate strong and secure passwords with customizable options like length and character types." />
+  <meta property="og:image" content="assets/preview-image.png" />
+  <meta property="og:url" content="https://s23010843.github.io/password-generator" />
+
+  <!-- Link to the stylesheet -->
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <section>
-    <h1>Password Generator</h1>
-    <form id="passwordForm">
-      <label for="length">Password Length:
-        <input type="number" id="length" name="length" min="4" max="50" value="12" required />
-      </label>
+  <header>
+    <h1 class="sr-only">Password Generator</h1>
+  </header>
 
-      <label>
-        <input type="checkbox" id="uppercase" checked />
-        Include Uppercase Letters
-      </label>
+  <main>
+    <section aria-labelledby="password-generator-section">
+      <h2 id="password-generator-section">Generate Your Secure Password</h2>
 
-      <label>
-        <input type="checkbox" id="numbers" checked />
-        Include Numbers
-      </label>
+      <form id="passwordForm" aria-labelledby="password-generator-section" role="form">
+        <fieldset>
+          <legend class="sr-only">Password settings</legend>
 
-      <label>
-        <input type="checkbox" id="symbols" checked />
-        Include Symbols
-      </label>
+          <label for="length">Password Length:
+            <input type="number" id="length" name="length" min="4" max="50" value="12" required aria-label="Password length (between 4 and 50)">
+          </label>
 
-      <div class="controls">
-        <button type="button" id="generateBtn">Generate</button>
-        <button type="button" id="copyBtn">Copy</button>
-      </div>
+          <div class="options" role="group" aria-labelledby="options-group">
+            <legend id="options-group" class="sr-only">Character Types</legend>
 
-      <div id="passwordOutput" class="output" aria-live="polite"></div>
-    </form>
-  </section>
+            <label><input type="checkbox" id="uppercase" checked> Include Uppercase Letters</label>
+            <label><input type="checkbox" id="numbers" checked> Include Numbers</label>
+            <label><input type="checkbox" id="symbols" checked> Include Symbols</label>
+          </div>
 
+          <div class="buttons">
+            <button type="button" class="generate" id="generateBtn">Generate</button>
+            <button type="button" class="copy" id="copyBtn" aria-label="Copy password to clipboard">Copy</button>
+          </div>
+        </fieldset>
+      </form>
+
+      <div id="passwordOutput" class="output" aria-live="polite" title="Generated Password"></div>
+    </section>
+  </main>
+
+<footer>
+  <p>© <span id="year"></span> • <a href="https://github.com/s23010843" title="Password Generator">Password Generator</a> • Built with modern web technologies.  
+    <br>Check out the project on <a href="https://github.com/s23010843/password-generator" target="_blank" rel="noopener noreferrer" title="View the source code on GitHub">GitHub</a> • Created by <a href="https://github.com/s23010843" target="_blank" rel="noopener noreferrer" title="Visit our GitHub profile">Us</a>.
+  </p>
+</footer>
+
+  <!-- Link to JavaScript -->
   <script src="script.js"></script>
+
 </body>
 </html>
