@@ -78,7 +78,7 @@ password-generator/
 
 ## 👨‍💻 Author
 
-**Your Name**  
+**S23010843**  
 [GitHub Profile](https://github.com/s23010843)
 
 ---
