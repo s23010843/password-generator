@@ -22,8 +22,6 @@
 ## 🌐 Live Demo
 
 > _Coming soon..._  https://s23010843.github.io/password-generator
-<!-- Or add a live GitHub Pages link here: -->
-<!-- https://your-username.github.io/password-generator -->
 
 ---
 
